@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/eb173574ae.js" crossorigin="anonymous"></script>
+    <title>Enter OTP</title>
+    <link rel="stylesheet" href="./styles/OTP.css" />
+  </head>
+  <body>
+    <div id="mainDiv">
+    <i class="fas fa-arrow-left" onclick="location.href='Signup Main.html'"></i>
+    <div class = "heading" ><h2> Enter OTP </h2></div>
+    <form>
+    <input id="EO" class="otp" type="number" placeholder="Enter your OTP here">
+    <p class="smltxt">OTP was sent to your number</p>
+    
+    </form>
+    <input  onclick="submit_otp()" class="btn" type="submit" value="CONTINUE"> 
+    </div>
+  </body>
+</html>
+<script>
+  function submit_otp() {
+    let otp_field = document.getElementById("EO").value;
+    var user_otp = {
+      otp_field:otp_field
+    };
+    if(otp_field.length < 6){
+      alert("Invalid OTP")
+    }
+    if(otp_field.length == 6){
+      alert("Success")
+      window.location.href = "product.html";
+    }
+    
+  }
+
+</script>
+

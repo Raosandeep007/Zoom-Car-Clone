@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Open+Sans:wght@500;800&family=Shippori+Antique+B1&family=Source+Sans+3:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Payment</title>
+    <script
+      src="https://kit.fontawesome.com/368c5c5b09.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style/payment.css" />
+  </head>
+
+  <body>
+    <nav id="nav" class="black">
+      <div>
+        <a href="fare_summary.html" class="black"
+          ><i id="arr" class="fas fa-arrow-left"></i
+        ></a>
+      </div>
+      <div id="ndate" class="vis">
+        <div id="price_div"></div>
+        <div class="toolbar-date" id="datediv">
+          <div id="sta"></div>
+          <i id="datearr" class="fas fa-arrow-left"></i>
+          <div id="end"></div>
+        </div>
+      </div>
+    </nav>
+    <div id="container">
+      <button id="myBtn" class="btnclass">
+        <div id="home">
+          <img src="img\card.png" />
+          <div id="hp">
+            <h3>Credit / Debit / ATM Card</h3>
+            <p>All major card providers are supported</p>
+          </div>
+        </div>
+      </button>
+      <button id="myBtn2" class="btnclass">
+        <div id="home" class="border">
+          <img src="img\Net banking.png" />
+          <div id="hp">
+            <h3>Net Banking</h3>
+            <p>All major card providers are supported</p>
+          </div>
+        </div>
+      </button>
+      <button id="myBtn3" class="btnclass">
+        <div id="home">
+          <img src="img\wallet.png" />
+          <div id="hp">
+            <h3>Mobile Wallet</h3>
+            <p>PayTm</p>
+          </div>
+        </div>
+      </button>
+    </div>
+    <!-- The Modal 1-->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+
+      <div id="container2" class="modal-content">
+        <span class="close">&times;</span>
+        <div id="imgamt">
+          <div>
+            <h3 class="heading1">Enter Card Details</h3>
+            <p class="text1" id="amt"></p>
+          </div>
+          <img class="img1" src="img/lock logo.png" alt="img" />
+        </div>
+
+        <input id="cardno" placeholder="Card Number" type="number" required />
+
+        <div id="inputdiv">
+          <input id="num2" placeholder="Expiry (MM/YY)" type="date" required />
+
+          <input id="num3" placeholder="CVV" type="number" required />
+        </div>
+        <button class="butn" id="paybtn" onclick="payss()"></button>
+      </div>
+    </div>
+
+    <!-- The Modal 2 -->
+    <div id="myModal2" class="modal">
+      <!-- Modal content -->
+
+      <div class="containerbank" class="modal-content">
+        <span class="close">&times;</span>
+        <div class="D1bank">
+          <div><h3 class="heading1bank">Select Bank Account</h3></div>
+          <div><img class="img1bank" src="img\lock logo.png" alt="img" /></div>
+        </div>
+        <p class="text1bank" id="amtbank"></p>
+
+        <div class="popbank">
+          <h3 class="pop1bank">POPULAR BANKS</h3>
+        </div>
+        <div id="slid">
+          <div class="bnkbank">
+            <div class="bnkImg">
+              <img class="imggbank" src="img\Hdfc.jpg" alt="logo" />
+            </div>
+            <div class="bnkName"><p class="bnkheadingbank">HDFC Bank</p></div>
+          </div>
+          <hr id="hrbank" />
+
+          <div class="bnkbank">
+            <div class="bnkImg">
+              <img class="imggbank" src="img\sbi.png" alt="logo" />
+            </div>
+            <div class="bnkName">
+              <p class="bnkheadingbank">State Bank Of India</p>
+            </div>
+          </div>
+          <hr id="hrbank" />
+
+          <div class="bnkbank">
+            <div class="bnkImg">
+              <img class="imggbank" src="img\axis.png" alt="logo" />
+            </div>
+            <div class="bnkName"><p class="bnkheadingbank">Axis Bank</p></div>
+          </div>
+          <hr id="hrbank" />
+
+          <div class="bnkbank">
+            <div class="bnkImg">
+              <img class="imggbank" src="img\indian bank.png" alt="logo" />
+            </div>
+            <div class="bnkName"><p class="bnkheadingbank">Indian Bank</p></div>
+          </div>
+          <hr id="hrbank" />
+
+          <div class="bnkbank">
+            <div class="bnkImg">
+              <img class="imggbank" src="img\rbi.png" alt="logo" />
+            </div>
+            <div class="bnkName"><p class="bnkheadingbank">RBI Bank</p></div>
+          </div>
+          <hr id="hrbank" />
+        </div>
+      </div>
+    </div>
+
+    <!-- The Modal 3-->
+    <div id="myModal3" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="D1bank">
+          <div><h3 class="heading1bank">Select Mobile Wallet</h3></div>
+          <div><img class="img1bank" src="img\lock logo.png" alt="img" /></div>
+        </div>
+        <p class="text1bank" id="amtpytm"></p>
+        <div class="bnkbank">
+          <div class="bnkImgbank">
+            <img class="imggbank" src="img\paytm.png" alt="logo" />
+          </div>
+          <div class="bnkNamebank"><p class="bnkheadingbank">PayTm</p></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="scripts/payment.js"></script>

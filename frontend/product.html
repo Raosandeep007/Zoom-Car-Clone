@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self Drive Car Rentals</title>
+    <script
+      src="https://kit.fontawesome.com/368c5c5b09.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <link rel="stylesheet" href="style/product.css" />
+  <!-- <link rel="stylesheet" href="styles/navstyles.css" /> -->
+  <body>
+    <div id="navbar_container"></div>
+    <div id="container">
+      <div id="filters">
+        <div class="filter-ctr">
+          <div class="headingside">Free kms</div>
+          <div class="have twodiv">
+            <div>
+              <button
+                class="btnside"
+                onclick="freekms(this,cardata)"
+                value="66"
+              >
+                66
+              </button>
+            </div>
+            <div>
+              <button
+                class="btnside"
+                onclick="freekms(this,cardata)"
+                value="132"
+              >
+                132
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="filter-ctr">
+          <div class="headingside">Fuel Cost</div>
+          <div class="have onediv">
+            <div>Not Included</div>
+          </div>
+        </div>
+        <div class="filter-ctr">
+          <div class="headingside">Seats</div>
+          <div class="have thdiv">
+            <div>
+              <button class="btnside" onclick="seats(this,cardata)" value="5">
+                5
+              </button>
+            </div>
+            <div>
+              <button class="btnside" onclick="seats(this,cardata)" value="6">
+                6
+              </button>
+            </div>
+            <div>
+              <button class="btnside" onclick="seats(this,cardata)" value="7">
+                7
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="filter-ctr">
+          <div class="headingside">Car Types</div>
+          <div class="have thdiv">
+            <div>
+              <button
+                class="btnside"
+                onclick="cartypes(this,cardata)"
+                value="SUV"
+              >
+                SUV
+              </button>
+            </div>
+            <div>
+              <button
+                class="btnside"
+                onclick="cartypes(this,cardata)"
+                value="hatchback"
+              >
+                hatchback
+              </button>
+            </div>
+            <div>
+              <button
+                class="btnside"
+                onclick="cartypes(this,cardata)"
+                value="Sedan"
+              >
+                Sedan
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="filter-ctr">
+          <div class="headingside">Transmission</div>
+          <div class="have twodiv">
+            <div>
+              <button
+                class="btnside"
+                onclick="transmission(this,cardata)"
+                value="Manual"
+              >
+                Manual
+              </button>
+            </div>
+            <div>
+              <button
+                class="btnside"
+                onclick="transmission(this,cardata)"
+                value="Automatic"
+              >
+                Automatic
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="filter-ctr">
+          <div class="headingside">Delivery Type</div>
+          <div class="have twodiv">
+            <div>Home Delivery</div>
+            <div>Airport</div>
+          </div>
+        </div>
+      </div>
+      <div id="right">
+        <div id="add">
+          Delhi NCR . P 803, Pan Oasis Society, Sector 70, Noida, Uttar Pradesh
+          201301, India
+        </div>
+        <div id="date">
+          <div class="toolbar-date" id="datediv">
+            <div id="sta"></div>
+            <i id="datearr" class="fas fa-arrow-right"></i>
+            <div id="end"></div>
+          </div>
+        </div>
+        <div id="carsdiv"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="scripts/products.js"></script>
+<script type="module">
+  import navbar from "./components/nav.js";
+  console.log("navbar:", navbar);
+  let navbar_container = document.getElementById("navbar_container");
+  navbar_container.innerHTML = navbar();
+
+  $(".btn").click(function () {
+    $(this).toggleClass("click");
+    $(".sidebar").toggleClass("show");
+  });
+
+  var pro_name = JSON.parse(localStorage.getItem("mydetails:"));
+
+  if (!pro_name || pro_name == undefined) {
+    let profile_name = document.getElementById("profile_name");
+    let side_login = document.getElementById("side_login");
+    profile_name.innerText = "Login/Signup";
+    side_login.innerText = "Login/Signup";
+  } else if (profile_name !== undefined) {
+    let logout = document.getElementById("logout");
+    logout.innerText = "Log Out";
+    let logouticon = document.getElementById("logouticon");
+    logouticon.innerHTML = `<i class="fas fa-sign-out-alt"></i>`;
+    let profile_name = document.getElementById("profile_name");
+    let side_login = document.getElementById("side_login");
+    profile_name.innerText = pro_name.name; //just for time being
+    side_login.innerText = pro_name.name;
+    let profilea = document.createElement("a");
+    profilea.innerHTML = `<i class="far fa-user-circle"></i>`;
+    profilea.href = "profile.html";
+    profilea.id = "profilea";
+
+    let profilepicappen = document.getElementById("profilepicappen");
+    profilepicappen.append(profilea);
+    logout.addEventListener("click", function () {
+      profile_name.innerText = "Login/Signup";
+      side_login.innerText = "Login/Signup";
+      window.location.href = "product.html";
+      localStorage.removeItem("mydetails:");
+    });
+  }
+
+  document
+    .getElementById("supermiler")
+    .addEventListener("click", gotoSupermiler);
+  function gotoSupermiler() {
+    window.location.href = "supermiler.html";
+  }
+
+  document.getElementById("zms").addEventListener("click", zmsFun);
+  function zmsFun() {
+    window.location.href = "ZMS.html";
+  }
+  document.getElementById("side_login").addEventListener("click", logFun);
+  document.getElementById("profile_name").addEventListener("click", logFun);
+  function logFun() {
+    window.location.href = "LOGIN.html";
+  }
+  document.getElementById("side_loginpro").addEventListener("click", () => {
+    window.location.href = "profile.html";
+  });
+</script>

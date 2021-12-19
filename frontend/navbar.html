@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sidebar Menu with sub-menu | CodingNepal</title>
+    <link rel="stylesheet" href="./styles/navstyles.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="navbar_container"></div>
+  </body>
+</html>
+<script type="module">
+  import navbar from "./components/nav.js";
+
+  let navbar_container = document.getElementById("navbar_container");
+
+  navbar_container.innerHTML = navbar();
+
+  $(".btn").click(function () {
+    $(this).toggleClass("click");
+    $(".sidebar").toggleClass("show");
+  });
+
+  var pro_name = JSON.parse(localStorage.getItem("mydetails:"));
+
+  if (!pro_name || pro_name == undefined) {
+    let profile_name = document.getElementById("profile_name");
+    let side_login = document.getElementById("side_login");
+    profile_name.innerText = "Login/Signup";
+    profile_name.innerText = "Login/Signup";
+  } else if (profile_name !== undefined) {
+    let logout = document.getElementById("logout");
+    logout.innerText = "Log Out";
+    let logouticon = document.getElementById("logouticon");
+    logouticon.innerHTML = `<i class="fas fa-sign-out-alt"></i>`;
+    let profile_name = document.getElementById("profile_name");
+    let side_login = document.getElementById("side_login");
+    profile_name.innerText = pro_name.name; //just for time being
+    side_login.innerText = pro_name.name;
+    let profilea = document.createElement("a");
+    profilea.innerHTML = `<i class="far fa-user-circle"></i>`;
+    profilea.href = "profile.html";
+    profilea.id = "profilea";
+    let profilepicappen = document.getElementById("profilepicappen");
+    profilepicappen.append(profilea);
+    logout.addEventListener("click", function () {
+      profile_name.innerText = "Login/Signup";
+      profile_name.innerText = "Login/Signup";
+      window.location.href = "navbar.html";
+      localStorage.removeItem("mydetails:");
+    });
+  }
+
+  document
+    .getElementById("supermiler")
+    .addEventListener("click", gotoSupermiler);
+  function gotoSupermiler() {
+    window.location.href = "supermiler.html";
+  }
+
+  document.getElementById("zms").addEventListener("click", zmsFun);
+  function zmsFun() {
+    window.location.href = "ZMS.html";
+  }
+
+  document.getElementById("profile_name").addEventListener("click", logFun);
+  function logFun() {
+    window.location.href = "LOGIN.html";
+  }
+</script>
