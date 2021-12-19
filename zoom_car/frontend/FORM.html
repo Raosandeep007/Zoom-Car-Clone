@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/eb173574ae.js" crossorigin="anonymous"></script>
+    <title>Signup here</title>
+    <link rel="stylesheet" href="./styles/FORM.css" />
+  </head>
+  <body>
+    <div id="mainDiv">
+    <i class="fas fa-arrow-left" onclick="location.href='SignupHome1.html'"></i>
+      <div id="heading"><h2>Please fill some details</h2></div>
+      <div id="text">One last step to create a new account</div>
+      <form  id="form">
+        <input type="text" placeholder="Enter full name" id="name"/>
+        <input type="email" placeholder="Enter Email ID" id="email"/>
+        <input type="text" placeholder="create username" id="username"/>
+        <input type="text" placeholder="say something to know more" id="description"/>
+        <input type="number" placeholder="Enter phone number to register..." id="mobile"/>
+        <input type="password" id="password" placeholder="Create password here"/>
+      
+        <!-- <input class="btn" id="btn" type="submit"  value="REGISTER"/> -->
+      </form>
+      <input onclick="register()"class="btn" id="btn" type="submit"  value="REGISTER"/>
+      
+     
+    </div>
+  </body>
+</html>
+<script>
+  async function register(){
+      
+let signup_data={
+
+name:document.getElementById("name").value,
+email:document.getElementById("email").value,
+password:document.getElementById("password").value,
+username:document.getElementById("username").value,
+mobile:document.getElementById("mobile").value,
+description:document.getElementById("description").value,
+}
+
+
+signup_data= JSON.stringify(signup_data);
+let url = `https://masai-api-mocker.herokuapp.com/auth/register`;
+
+let response = await fetch(url,{
+  method:"POST",
+  body:signup_data,
+
+  headers:{
+      "Content-Type":"application/json",
+  }
+
+});
+let data= await response.json();
+data.signal = true;
+// localStorage.setItem("mydetails:",JSON.stringify(data))
+console.log(data)
+alert("Registration successful");
+window.location.href="USER&PASS.html"
+  }
+
+
+</script>

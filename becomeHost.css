@@ -1,0 +1,700 @@
+
+#pagebox{
+    width: 100%;
+
+}
+
+    .cardcontainer{
+        /* border: 1px solid blue; */
+        margin-left: 7%;
+        width: 90%;
+        height: 650px;
+        /* margin-top: 6%; */
+    }
+    .cardcontainer .card_img{
+        /* border: 1px solid black; */
+        width: 100%;
+    }
+    .cardcontainer .image_text{
+        color: white;
+        margin-left: 5%;
+        margin-top: 4%;
+        line-height: 1px;
+        font-size: 60px;
+    }
+    .cardcontainer #card_text1{
+        color: white;
+        margin-top: 5%;
+        margin-left: 5%;
+        line-height: 1px;
+    }
+    .cardcontainer #imagebutton{
+        width: 15%;
+        height: 60px;
+        margin-left: 4%
+        /* margin-top: 2%; */
+    }
+
+
+    #videofile{
+        /* border: 1px solid red; */
+        width: 91%;
+        height: 530px;
+        margin-top: 2%;
+        margin-left: 6%;
+    }
+
+    .box2 img {
+        width: 90%;
+        height: 350px;
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+    .para{
+        /* border: 1px solid red; */
+        width: 70%;
+        margin-top: 6%;
+        margin-left: 16%;
+        
+    }
+    .para h1{
+        font-size: 60px;
+        /* font-family: IBM Plex Sans; */
+    }
+    .para #line2{
+        font-size: 60px;
+        text-align: center;
+    }
+    .box3 {
+        /* border: 1px solid red; */
+        width: 70%;
+        margin-left: 16%;
+        height: 350px;
+        display: flex;
+        margin-top: 5%;
+        
+    }
+    .inner_box1 {
+    /* border: 1px solid black; */
+    width: 40%;
+    }
+    .box3 .inner_box2 {
+        /* border: 1px solid green; */
+        width: 50%;
+        margin-left: 8%;
+    }
+    .inner_box1 p {
+        font-size: 27px;
+        font-family: IBM Plex Sans;
+        color: grey;
+    }
+
+    .inner_box2 img {
+        width: 100%;
+    }
+    .inner_box3 img {
+        width: 100%;
+    }
+    .inner_box4 {
+    /* border: 1px solid black; */
+    width: 40%;
+    margin-left: 8%;
+    }
+    .box3 .inner_box3 {
+        /* border: 1px solid green; */
+        width: 50%;
+        /* margin-left: 8%; */
+    }
+
+    .para1 {
+        /* border: 1px solid black; */
+        width: 50%;
+        margin-left: 10%;
+        margin-top: 4%;
+    }
+
+    #parabox{
+        /* border: 1px solid black; */
+        height: 500px;
+        width: 80%;
+        margin-left: 11%;
+        margin-top: 2%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    #parabox .paraminibox {
+        display: inline-block;
+        /* border: 1px solid greenyellow; */
+        width: 30%;
+        margin-left: 1%;
+    }
+
+    .paraminibox p {
+        font-family: IBM Plex Sans;
+    }
+    .paraminibox h4{
+        font-family: IBM Plex Sans;
+        font-size: 25px;
+    }
+    
+    #parabox p{
+        font-size: 22px;
+        font-family: IBM Plex Sans;
+        line-height: 80%;
+    }
+
+    #para1 {
+        /* border: 1px solid blue; */
+        width: 60%;
+        
+    }
+    #para1 h1{
+        font-size: 60px;
+    }
+    #para1 p{
+        font-size: 30px;
+        font-family: IBM Plex Sans;
+        color: grey;
+    }
+
+    .para1_box{
+        /* border: 1px solid blue; */
+        width: 24%;
+        height: 300px;
+        /* margin-top: 1%; */
+        display: inline-block;
+    }
+
+    .para1_imgbox {
+        /* border: 1px solid black; */
+        width: 25%;
+        height: 85px;
+        margin-left: 35%;
+        margin-top: 5%;
+    }
+    .para1_imgbox img{
+        width: 100%;
+    }
+
+    .para1_box h1 {
+        text-align: center;
+    }
+
+    .para1_box h3 {
+        text-align: center;
+        color: grey;
+    }
+
+    #para2 .line {
+        display: inline-block;
+        /* border: 1px solid grey; */
+        background-color: grey;
+        width: 5px;
+        height: 320px;
+        /* margin-top: 2%; */
+    }
+
+    #container {
+        /* border: 1px solid red; */
+        height: 600px;
+        margin-left: 10%;
+        margin-top: 4%;
+    }
+
+    #container #para2 {
+        /* border: 1px solid rgb(185, 6, 6); */
+        margin-top: 1%;
+        margin-left: 3%;
+        width: 95%;
+        height: 350px;
+    }
+
+    #calculator{
+        /* border: 1px solid red; */
+        height: 350px;
+        width: 70%;
+        margin-left: 10%;
+        /* background-color: dimgray; */
+    }
+    #calculator p{
+        font-size: 28px;
+    }
+
+    #calculator h1{
+        font-size: 70px;
+    }
+
+    #startearning_btn {
+        width: 20%;
+        background-color: rgb(16, 163, 16);
+        height: 17%;
+    }
+
+    #calculator button h3{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    #calculator h6 a{
+        color: rgb(16, 163, 16);
+        font-size: 18px;
+    }
+
+    #estimatepop{
+        /* border: 1px solid blue; */
+        margin-left: 10%;
+        /* margin-top: 2%; */
+        width: 16%;
+    } 
+
+    /* #estimate h */
+
+    #referEarn{
+        /* border: 1px solid black; */
+        width: 83%;
+        height: 520px;
+        margin-left: 7%;
+        margin-top: 3%;
+        border-radius: 3%;
+        color: #383838;
+        background-color: rgb(56, 56, 56);
+    }
+
+    #referEarn #innerbox{
+        display: inline-block;
+        /* border: 1px solid black; */
+        width: 40%;
+        height: 280px;
+        margin-top: 3%;
+        margin-left: 3%;
+    }
+
+    #referEarn #image{
+        float: right;
+        display: inline-block;
+        /* border: 1px solid red; */
+        width: 40%;
+        height: 250px;
+        
+        /* margin-right: 2%; */
+        margin-top: 3%;
+    }
+    #image img{
+        /* border: 1px solid blue; */
+        width: 70%;
+        /* height: 250px; */
+    }
+
+    #innerbox h1{
+        font-size: 50px;
+        color: white;
+    } 
+
+    #innerbox  h4{
+        color: white;
+    }
+
+    #earnbutton{
+        width: 40%;
+        background-color: rgb(16, 163, 16);
+        height: 55px;
+        /* margin-left: 3%; */
+    }
+
+    #innerbox button h3{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    #referEarn #para{
+        /* border: 1px solid white; */
+        margin-top: 1%;
+        width: 90%;
+        height: 110px;
+        margin-left: 3%;
+    }
+
+    #para{
+        margin-top: 3%;
+    }
+    #para p {
+        color: white;
+        font-family: IBM Plex Sans;
+        font-size: 25px;
+    }
+
+    #animation {
+        /* border: 1px solid red; */
+        margin-left: 7%;
+        margin-top: 4%;
+        width: 83%;
+        height: 450px;
+        background-color: rgb(245, 245, 245);
+    }
+
+    #animation #text{
+        border: 1px solid rgb(245,245,245);
+        margin-top: 3%;
+        width: 87%;
+        margin-left: 7%;
+    }
+    #animation h1{
+        /* font-family :IBM Plex Sans; */
+        font-size:40px;
+        margin-top: 7%;
+    }
+
+    #animation #video{
+        margin-left: 8%;
+        margin-top: 3%;
+        /* background-color: rgb(211, 211, 211); */
+        /* border: 1px solid green; */
+        width: 90%;
+        height: 200px;
+    }
+
+    #modalbox {
+        /* border: 1px solid red; */
+        width: 87%;
+        height: 570px;
+        overflow-y: scroll;
+        margin-left: 12%;
+    }
+
+    #exampleModalCenterTitle{
+        font-size: 40px;
+        margin-left: 13%;
+        margin-top: 2%;
+    }
+
+    #modalheading{
+        /* border: 1px solid green; */
+        width: 70%;
+        height: 180px;
+    }
+
+    #modalheading .modalheading1{
+        color: rgb(102, 102, 102);
+        font-family: IBM Plex Sans;
+        font-size: 25px;
+    }
+
+    #modalimage{
+        /* border: 1px solid black; */
+        width: 70%;
+        height: 250px;
+        /* margin-top: 1%; */
+        margin-left: 4%;
+    }
+
+    #modalimage img{
+        width: 95%;
+    }
+
+    #logo{
+        /* border: 1px solid red; */
+        width: 70%;
+        height: 130px;
+        margin-left: 5%;
+        margin-top: 1%;
+    }
+
+    #logo .logobox1{
+        display: inline-block;
+        /* border: 1px solid blue; */
+        width: 20%;
+        height: 130px;
+        margin-left: 7%;
+    }
+
+    #logo .logobox2 {
+        display: inline-block;
+        /* border: 1px solid green; */
+        width: 20%;
+        height: 130px;
+        margin-left: 3%;
+    }
+
+    .logobox1 img{
+        margin-left: 20%;
+    }
+
+    .logobox2 img{
+        margin-left: 20%;
+    }
+
+    #modalbox1{
+        /* border: 1px solid red; */
+        width: 92%;
+        height: 590px;
+        /* overflow-y: scroll; */
+        margin-left: 7%;
+    }
+
+    #modalbox1 #firstbox{
+        /* border: 1px solid green; */
+        height: 20%;
+    }
+
+    #firstbox .icon{
+        float: left;
+        /* border: 2px solid black; */
+        width: 13%;
+        height: 80px;
+        margin-top: 1%;
+        margin-left: 5%;
+    }
+    #firstbox .icon_content{
+        /* border: 2px solid blue; */
+        margin-top: 1%;
+        margin-left: 15%;
+        width: 75%;
+        height: 95px;
+    }
+    #firsticon{
+       margin: auto;
+    }
+
+    .icon_content .data{
+        color: rgb(102, 102, 102);
+        font-family: IBM Plex Sans;
+        font-size: 22px;
+    }
+
+    #modalbox1 #secondbox{
+        /* border: 2px solid green; */
+        margin-top: 2%;
+        height: 20%;
+    }
+
+    #secondbox .icon2{
+        float: left;
+        /* border: 1px solid black; */
+        width: 13%;
+        height: 80px;
+        margin-top: 1%;
+        margin-left: 5%;
+    }
+    #secondbox .icon_content2{
+        /* border: 2px solid blue; */
+        margin-top: 1%;
+        margin-left: 15%;
+        width: 75%;
+        height: 95px;
+    }
+    #secondicon{
+        margin: auto;
+     }
+     .icon_content2 .data{
+        color: rgb(102, 102, 102);
+        font-family: IBM Plex Sans;
+        font-size: 22px;
+    }
+
+    #thirdbox{
+        /* border: 1px solid red; */
+        /* margin-top: 0.7%; */
+        height: 27%;
+        width: 60%;
+        margin-left: 18%;
+    }
+
+    #thirdbox li{
+        font-size: 23px;
+        color: rgb(102, 102, 102);
+        font-family: IBM Plex Sans;
+    }
+
+    #modalbox1 #fourthbox{
+        /* border: 1px solid green; */
+        height: 20%;
+    }
+
+    #fourthbox .icon3{
+        float: left;
+        /* border: 2px solid black; */
+        width: 13%;
+        height: 80px;
+        margin-top: 1%;
+        margin-left: 5%;
+    }
+    #fourthbox .icon_content3{
+        /* border: 2px solid blue; */
+        margin-top: 1%;
+        margin-left: 15%;
+        width: 75%;
+        height: 95px;
+    }
+    #fourthicon{
+       margin: auto;
+    }
+
+    .icon_content3 .data{
+        color: rgb(102, 102, 102);
+        font-family: IBM Plex Sans;
+        font-size: 22px;
+    }
+
+    /* below star animation part */
+
+    #contentdropdown{
+        display: inline-block;
+        /* border: 2px solid red; */
+        margin-top: 4%;
+        margin-left: 7%;
+        width: 83%;
+        height: 550px;
+    }
+
+    #contentdropdown #headingpart {
+        position:absolute;
+        /* display: inline-block; */
+        /* border: 2px solid black; */
+        width: 26%;
+        height: 400px;
+    }
+
+    #headingpart .headingcontent{
+        font-size: 70px;
+        color: rgb(31, 31, 31);
+        line-height: 84.18px;
+    }
+    #contentdropdown #clickdrop{
+        /* display: inline-block; */
+        /* border: 1px solid green; */
+        width: 66%;
+        height: 400px;
+        margin-left: 33%;
+    }
+
+    .box1{
+        display: flex;
+        /* border: 1px solid red; */
+        width: 98%;
+        height: 70px;
+        margin-top: 1%;
+        /* font-size: 25px; */
+    }
+    .box2{
+        display: flex;
+        /* border: 1px solid black; */
+        width: 98%;
+        
+        height: 0px;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .box2 p{
+        margin-top: 2%;
+    }
+    .line{
+        border: 1px solid grey;
+        background-color: rgb(245, 245, 245);
+        /* margin-top: 1%; */
+    }
+    .minibox{
+        display: flex;
+        /* border: 1px solid black; */
+        width: 98%;
+        
+        height: 0px;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .minibox p{
+        margin-top: 1%;
+    }
+
+    #displayoff{
+    /* display: none; */
+        transition: 0.5s;
+    }
+
+    #clickdrop{
+    /* display: inline-block; */
+    /* border: 1px solid green; */
+    width: 66%;
+    height: 700px;
+    margin-left: 33%;
+}
+
+.topcontentbox{
+    color: rgb(31, 31, 31);
+    font-family: IBM Plex Sans;
+    font-size: 25px;
+}
+
+.bottomcontentbox{
+    /* border: 1px solid blue; */
+    width: 98%;
+    height: auto;
+    color: rgb(102, 102, 102);
+    font-family: IBM Plex Sans;
+    font-size: 22px;
+    line-height: 22%;
+}
+/* .bottomcontentbox2{
+    border: 1px solid blue;
+    width: 98%;
+    height: 50px;
+    color: rgb(102, 102, 102);
+    font-family: IBM Plex Sans;
+    font-size: 22px;
+    line-height: 20%;
+} */
+
+.modal-dialog {
+    height: 400px;
+}
+
+#calmain{
+    /* border: 1px solid red; */
+    height: 500px;
+}
+
+.modal-header h4{
+    margin-top: 3%;
+    font-size: 40px;
+}
+
+#mainform #dropbox1{
+    height: 80px;
+}
+
+#mainform #dropbox2{
+    height: 80px;
+    margin-top: 4%;
+}
+
+#calmain #scrollbox1 {
+    /* border: 1px solid greenyellow; */
+    height: 22%;
+    margin-top: 5%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* padding: 15%; */
+    white-space: nowrap;
+}
+
+.modalbuttons{
+    height: 60px;
+    width: 15%;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+#calmain #priceselector{
+    /* border: 1px solid blue; */
+    margin-top: 3.5%;
+    height: 60px;
+}
+
+/* #formControlRange{
+    height: 300px;
+} */
+.form-control-range{
+    height: 3rem;
+    background-color: #b6d4fe;
+}

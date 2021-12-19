@@ -1,0 +1,102 @@
+
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script src="https://kit.fontawesome.com/eb173574ae.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap"rel="stylesheet"/>            
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <title>Signup Mobile</title>
+      <link rel="stylesheet" href="/Arundhathi_Menon/styles/USER&PASS.css" />
+    </head>
+    <body>
+      <div id="mainDiv">
+        <i class="fas fa-arrow-left" onclick="location.href='SignupHome1.html'"></i>
+        <div class="heading">Login with Username & password</div>
+        <form>
+          <input type="text" id="username" placeholder="Username"/>
+          <input type="password" id="password" placeholder="Password" />
+          
+        
+        </form>
+        <input onclick="login()" id="gotoNext" class="btn" type="submit"  value="CONTINUE" />
+        <!-- <button onclick="login()">continue</button> -->
+      </div>
+    </body>
+  </html>
+  <script>
+ 
+   async function login(){
+  
+  let login_data={
+    username:document.getElementById("username").value,
+      password:document.getElementById("password").value,
+  }
+  
+  login_data = JSON.stringify(login_data);
+      let url = "https://masai-api-mocker.herokuapp.com/auth/login";
+  
+      let response = await fetch(url ,{
+          method:"POST",
+          body:login_data,
+          headers:{
+              "Content-Type" : "application/json",
+          },
+  
+          
+      })
+  
+      let data = await response.json();
+      console.log(data);
+  
+      
+      let username = document.getElementById("username").value
+  
+      getProfile(username,data.token);
+  
+      localStorage.setItem("Data",JSON.stringify(data));
+  
+      let login_details = JSON.parse(localStorage.getItem("Data"));
+  
+     if((!login_details.token)||(login_details.token==undefined)){
+       alert("Not Registered! Please Register");
+       window.location.href="/Arundhathi_Menon/FORM.html";
+       
+     } 
+  
+     if(login_details.token!=undefined){
+       alert("Please Enter 6 digit OTP sent to your Mobile number");
+       window.location.href="/Arundhathi_Menon/OTP.html";
+       
+     } 
+     
+      }
+  
+      async function getProfile(username,token){
+  
+          let api = `https://masai-api-mocker.herokuapp.com/user/${username}`;
+  
+          let response = await fetch(api,{
+              headers:{
+                  "Content-Type":"application/json",
+                  Authorization:`Bearer ${token}`
+              },
+  
+          });
+          let data = await response.json();
+          data.signal = true;
+          console.log("data:",data);
+          localStorage.setItem("mydetails:",JSON.stringify(data))
+          
+  
+      }
+      
+     
+  
+  
+  </script>
+  
