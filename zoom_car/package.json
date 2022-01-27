@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start":"node index.js",
+    "start":"nodemon zoom_car/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
